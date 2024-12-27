@@ -1,0 +1,149 @@
+.review-section {
+  padding: 5rem 0;
+  background-color: #F0F9FF;
+  position: relative;
+}
+
+.review-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.review-google-logo {
+  object-fit: contain;
+}
+
+.review-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2C5282;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review-summary {
+  text-align: center;
+  margin-bottom: 3rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.review-stars {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.review-rating {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3182CE;
+}
+
+.review-count {
+  color: #4A5568;
+  margin-left: 0.5rem;
+}
+
+.review-carousel {
+  position: relative;
+}
+
+.review-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.review-container::-webkit-scrollbar {
+  display: none;
+}
+
+.review-card {
+  flex-shrink: 0;
+  width: 100%;
+  scroll-snap-align: start;
+  background-color: white;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 640px) {
+  .review-card {
+    width: calc(50% - 0.5rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .review-card {
+    width: calc(33.333% - 0.667rem);
+  }
+}
+
+.review-content {
+  padding: 1.5rem;
+}
+
+.review-text {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  color: #4A5568;
+}
+
+.review-author {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #2D3748;
+}
+
+.review-date {
+  font-size: 0.75rem;
+  color: #718096;
+}
+
+.review-gradient-left,
+.review-gradient-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4rem;
+  pointer-events: none;
+}
+
+.review-gradient-left {
+  left: 0;
+  background: linear-gradient(to right, #F0F9FF, transparent);
+}
+
+.review-gradient-right {
+  right: 0;
+  background: linear-gradient(to left, #F0F9FF, transparent);
+}
+
+.review-nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-nav-button-left {
+  left: -1rem;
+}
+
+.review-nav-button-right {
+  right: -1rem;
+}
+

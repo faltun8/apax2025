@@ -1,0 +1,153 @@
+.hero-section {
+  background-color: white;
+  padding: 2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  transition: opacity 0.5s;
+}
+
+.hero-banner.active {
+  opacity: 1;
+}
+
+.hero-banner.inactive {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+.hero-content {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #2C5282;
+}
+
+.hero-description {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #4A5568;
+}
+
+.hero-image-container {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.hero-image {
+  border-radius: 0.5rem;
+}
+
+.hero-nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 20;
+}
+
+.hero-nav-button:hover {
+  background-color: white;
+}
+
+.hero-nav-button-left {
+  left: 0.5rem;
+}
+
+.hero-nav-button-right {
+  right: 0.5rem;
+}
+
+.hero-dots {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 20;
+}
+
+.hero-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  transition: background-color 0.3s;
+}
+
+.hero-dot-active {
+  background-color: #3182CE;
+}
+
+.hero-dot-inactive {
+  background-color: #BEE3F8;
+}
+
+.hero-dot-inactive:hover {
+  background-color: #90CDF4;
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    padding: 4rem 0;
+  }
+
+  .hero-banner {
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 500px;
+  }
+
+  .hero-content {
+    width: 50%;
+    padding-right: 2rem;
+    text-align: left;
+    background-color: transparent;
+    margin-bottom: 0;
+  }
+
+  .hero-title {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-image-container {
+    width: 50%;
+    height: 400px;
+    margin-bottom: 0;
+  }
+}
+

@@ -1,0 +1,54 @@
+.who-we-are-section {
+  background-color: #F3F4F6;
+  padding: 4rem 0;
+}
+
+.who-we-are-section h2 {
+  margin-bottom: 2rem;
+}
+
+.who-we-are-section .card {
+  height: 100%;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.who-we-are-section .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.who-we-are-section .card-title {
+  color: #2C5282;
+}
+
+.who-we-are-section .card-content p {
+  line-height: 1.6;
+}
+
+.experience-banner {
+  transition: transform 0.3s ease-in-out;
+}
+
+.experience-banner:hover {
+  transform: translateY(-2px);
+}
+
+.experience-banner p {
+  color: #2C5282;
+}
+
+@media (max-width: 768px) {
+  .who-we-are-section {
+    padding: 3rem 0;
+  }
+  
+  .experience-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .experience-banner .lucide {
+    margin-bottom: 0.5rem;
+  }
+}
+

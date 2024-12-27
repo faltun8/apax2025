@@ -1,0 +1,22 @@
+.store-map {
+  position: relative;
+  width: 100%;
+  height: 500px; /* You can adjust this height as needed */
+  background-color: white;
+}
+
+.store-map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (min-width: 768px) {
+  .store-map {
+    height: 600px; /* Increase height for larger screens */
+  }
+}
+
