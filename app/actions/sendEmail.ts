@@ -43,8 +43,8 @@ export async function sendEmail(formData: FormData) {
     return { success: true }
   } catch (error) {
     console.error(error)
-    if (error.response) {
-      console.error(error.response.body)
+    if (error instanceof Error && 'response' in error) {
+      console.error((error as any).response.body)
     }
     return { error: 'An error occurred while sending the email. Please try again.' }
   }
