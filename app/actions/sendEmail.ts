@@ -27,13 +27,13 @@ export async function sendEmail(formData: FormData) {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY as string)
 
   const msg = {
-    to: 'frknaltn08@gmail.com', // Change this to your recipient
-    from: 'frknaltn08@gmail.com', // Change this to your verified sender
-    subject: `New contact form submission: ${subject}`,
-    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
-    html: `<strong>Name:</strong> ${name}<br>
+    to: 'gokhansarac@apax.com.tr', // Change this to your recipient
+    from: 'gokhansarac@apax.com.tr', // Change this to your verified sender
+    subject: `Yeni form basvurusu: ${subject}`,
+    text: `Isim: ${name}\nEmail: ${email}\nMesaj: ${message}`,
+    html: `<strong>Isim:</strong> ${name}<br>
            <strong>Email:</strong> ${email}<br>
-           <strong>Message:</strong> ${message}`,
+           <strong>Mesaj:</strong> ${message}`,
   }
   
   console.log('msg', msg)
