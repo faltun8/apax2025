@@ -9,7 +9,9 @@ import { Button } from "@/app/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/app/components/ui/form"
 import { Input } from "@/app/components/ui/input"
 import { Textarea } from "@/app/components/ui/textarea"
-// import { useToast } from "@/components/ui/use-toast"
+import { Alert, AlertDescription, AlertTitle } from "@/app/components/ui/alert"
+import { CheckCircle, AlertCircle } from 'lucide-react'
+
 
 const schema = z.object({
   name: z.string().min(2, { message: "İsim en az 2 karakter olmalıdır." }),
@@ -22,7 +24,8 @@ type FormValues = z.infer<typeof schema>
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
-  // const { toast } = useToast()
+  const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null)
+  const [statusMessage, setStatusMessage] = useState('')
 
   const form = useForm<FormValues>({
     resolver: zodResolver(schema),
@@ -36,24 +39,22 @@ export default function ContactForm() {
 
   async function onSubmit(data: FormValues) {
     setIsSubmitting(true)
+    setSubmitStatus(null)
+    setStatusMessage('')
+
     const formData = new FormData()
     Object.entries(data).forEach(([key, value]) => formData.append(key, value))
 
     const result = await sendEmail(formData)
 
-    // if (result.error) {
-    //   toast({
-    //     title: "Hata",
-    //     description: typeof result.error === 'string' ? result.error : "Form gönderilirken bir hata oluştu. Lütfen tekrar deneyin.",
-    //     variant: "destructive",
-    //   })
-    // } else {
-    //   toast({
-    //     title: "Başarılı",
-    //     description: "Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız.",
-    //   })
-    //   form.reset()
-    // }
+    if (result.error) {
+      setSubmitStatus('error')
+      setStatusMessage(typeof result.error === 'string' ? result.error : "Form gönderilirken bir hata oluştu. Lütfen tekrar deneyin.")
+    } else {
+      setSubmitStatus('success')
+      setStatusMessage("Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız.")
+      form.reset()
+    }
 
     setIsSubmitting(false)
   }
@@ -118,6 +119,21 @@ export default function ContactForm() {
               </FormItem>
             )}
           />
+          {submitStatus && (
+            <Alert variant={submitStatus === 'success' ? 'default' : 'destructive'}>
+              {submitStatus === 'success' ? (
+                <CheckCircle className="h-4 w-4" />
+              ) : (
+                <AlertCircle className="h-4 w-4" />
+              )}
+              <AlertTitle>
+                {submitStatus === 'success' ? 'Başarılı' : 'Hata'}
+              </AlertTitle>
+              <AlertDescription>
+                {statusMessage}
+              </AlertDescription>
+            </Alert>
+          )}
           <Button type="submit" disabled={isSubmitting} className="w-full">
             {isSubmitting ? 'Gönderiliyor...' : 'Gönder'}
           </Button>
@@ -126,4 +142,3 @@ export default function ContactForm() {
     </div>
   )
 }
-

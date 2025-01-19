@@ -3,8 +3,8 @@ import '../styles/Footer.css'
 import { MapPin, Phone, Mail, Clock, Lock } from 'lucide-react'
 
 const workingHours = [
-  { days: 'Pazartesi - Cuma', hours: '09:00 - 17:30', icon: Clock },
-  { days: 'Cumartesi', hours: '09:00 - 12:00', icon: Clock },
+  { days: 'Pazartesi - Cuma', hours: '09:00 - 19:30', icon: Clock },
+  { days: 'Cumartesi', hours: '12:00 - 19:00', icon: Clock },
   { days: 'Pazar', hours: 'Kapalıyız', icon: Lock },
 ];
 

@@ -74,8 +74,8 @@ export default function ReviewSection() {
               <Star key={i} className="text-yellow-400 fill-current w-6 h-6" />
             ))}
           </div>
-          <span className="review-rating">4.8</span>
-          <span className="review-count">(42 değerlendirme)</span>
+          <span className="review-rating">4.9</span>
+          <span className="review-count">(36 değerlendirme)</span>
         </div>
 
         <div className="review-carousel">
