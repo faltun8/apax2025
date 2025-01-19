@@ -8,14 +8,188 @@ import Image from 'next/image'
 import '../styles/ReviewSection.css'
 
 const googleReviews = [
-  { id: 1, name: "Mehmet A.", text: "Çok hızlı ve profesyonel hizmet. Teşekkürler Apax!", rating: 5, date: "2023-05-15" },
-  { id: 2, name: "Ayşe K.", text: "Bilgisayarımı kısa sürede tamir ettiler. Çok memnun kaldım.", rating: 5, date: "2023-05-10" },
-  { id: 3, name: "Ali R.", text: "Fiyatları uygun ve işçilik kaliteli. Tavsiye ederim.", rating: 4, date: "2023-05-05" },
-  { id: 4, name: "Zeynep B.", text: "Mac'imi çok hızlı bir şekilde tamir ettiler. Teşekkürler!", rating: 5, date: "2023-04-30" },
-  { id: 5, name: "Mustafa Y.", text: "Çok ilgili ve bilgili ekip. Kesinlikle tavsiye ediyorum.", rating: 5, date: "2023-04-25" },
-  { id: 6, name: "Elif S.", text: "Hızlı ve güvenilir hizmet. Fiyatlar da gayet makul.", rating: 4, date: "2023-04-20" },
-  { id: 7, name: "Ahmet D.", text: "Laptop'umun fan sorununu çözdüler. Artık sessiz çalışıyor.", rating: 5, date: "2023-04-15" },
-  { id: 8, name: "Fatma G.", text: "Virüs temizleme konusunda harikalar. Bilgisayarım eskisinden hızlı!", rating: 5, date: "2023-04-10" },
+  {
+    id: 1,
+    name: "Furkan ALTUN",
+    text: "Tamir isini herkes yapiyor ama bu derece guvenilir, icten ve yetkin kisi sayisi cok az. Herkese gokhan beyi tavsiye ediyorum. Ozellikle apple urunlerinde gercekten cok iyiler.",
+    rating: 5,
+    date: "25 dakika önce"
+  },
+  {
+    id: 2,
+    name: "Sencer Yılmaz",
+    text: "Bütün işleri eksiksiz ve zamanında yapması ve güvenilirliğiyle daha fazla yıldız hakediyor",
+    rating: 5,
+    date: "3 hafta önce"
+  },
+  {
+    id: 3,
+    name: "Anıl Özcan",
+    text: "İşini tam anlamıyla titizlikle yapıyor, çok memnun kaldım. Gözünüz kapalı güvenebilirsiniz. 15 yıllık bilgisayarımı 1 saatte ayağı kaldırdı. 10 yıldız olsa 10 veririm",
+    rating: 5,
+    date: "3 hafta önce"
+  },
+  {
+    id: 4,
+    name: "BBurak BBurak",
+    text: "Verdiği bakım hizmetinden dolayı kendisine teşşekür ederim cihazın termal macununu değiştirdi ve sıcaklık olarak kasada ciddi bir fark oldu.",
+    rating: 5,
+    date: "3 hafta önce"
+  },
+  {
+    id: 5,
+    name: "Guntur Gunawan",
+    text: "The repair was incredibly fast, and they managed to fix my laptop in no time. The communication was very good, he kept me updated throughout the process and explained everything clearly. I highly recommend their service for anyone looking for reliable repairs. Thank you so much Gokhan Bey.",
+    rating: 5,
+    date: "bir ay önce"
+  },
+  {
+    id: 6,
+    name: "Doğa Darı",
+    text: "Bilgisayarım internete bağlanmıyordu, ve bu doğal olarak sıkıntı yaratıyordu, arama motorunda bilgisayarımı tamir ettirmek için yaptığım arama sonuçları arasında ilk gözüme çarpan yer burasıydı ( APAX BİLGİSAYAR HİZMETLERİ ). Sitede yazan iletişim numarasını aradım ve Gökhan Bey'le görüştüm, kendisi gayet nazik ve ilgiliydi. Bilgisayarımı götürdüm ve kısa sürede tamir edildi. Fiyat konusunda da gayet uygundu. Teşekkürler Gökhan Bey.",
+    rating: 5,
+    date: "3 ay önce"
+  },
+  {
+    id: 7,
+    name: "Yazgı Mutlu",
+    text: "Gökhan Bey işinde çok başarılı ve titiz biri . Kullandığımız bilgisayarların hassasiyetine dikkat ederek en kısa sürede en iyi çözümü sunuyor. Hem evde kullandığım hem de işte kullandığımız bilgisayarları sürekli kendisine getiriyoruz. Güler yüzlü ve samimi yaklaşımı için de ayrıca teşekkür ederim.",
+    rating: 5,
+    date: "5 ay önce"
+  },
+  {
+    id: 8,
+    name: "Aydın Burak Kuyumcu",
+    text: "Gökhan abi gayet işini iyi bilen, soru sorduğunuzda sizi çok iyi bilgilendiren ve sorununuzu hızlıca ve profesyonelce çözmesinden  dolayı çok memun kaldım. Teşekkür ederim.",
+    rating: 5,
+    date: "7 ay önce"
+  },
+  {
+    id: 9,
+    name: "Kaan Güryuva",
+    text: "Gökhan abi gayet işini bilen nerede ne yapılması gerektiğini bilen ve istediğiniz soruyu sorup sizi gerçekten insan yerine koyup düzgün cevap veren bir insan.",
+    rating: 5,
+    date: "11 ay önce"
+  },
+  {
+    id: 10,
+    name: "Ahmet Şengül",
+    text: "Gökhan Bey'e şirketimizde bulunan 4 dizüstü bilgisayarı 2 tanesi harap şeklinde olmasına rağmen çok temiz şekilde kullanır hale getirdi.İşçiliğini ve dürüstlüğünü çok beğendiğim Gökhan Bey'e hiç şüphe duymadan güvenilir  bir şekilde teslim edebilirsiniz.Teşekkür ederiz.",
+    rating: 5,
+    date: "bir yıl önce"
+  },
+  {
+    id: 11,
+    name: "onur varoğlu",
+    text: "Gökhan Bey işinde çok mahir. Ben APAX bilgisayara üç adet bilgisayar yenilettim. Bu bilgisayarlar 13, 11 ve 8 yaşlarındaydı. Bu üç bilgisayarı da ayrı işler için kullanıyorum, yenilemeden sonra sanki üç tane yeni bilgisayar kullanıyor gibi oldum. Gökhan Bey'e çok teşekkür ederim.",
+    rating: 5,
+    date: "bir yıl önce"
+  },
+  {
+    id: 12,
+    name: "Olcay Boran",
+    text: "Sevgili Gökhan bey hem işine çok hakim olmakla birlikte alternatif çözüm arayan ekonomik seçenekler de sunan ve kısa sürede çözüme kavuşturan biri. Servis kalemleri de geniş. İyi işler ve teşekkür dileklerimle👍👍👍",
+    rating: 5,
+    date: "bir yıl önce"
+  },
+  {
+    id: 13,
+    name: "Melih POLAT",
+    text: "Çok kısa sürede arızayı tespit edip sorunu çözdü. Güler yüzü ve samimiyeti için de bundan sonra tek tercihim olur. Gökhan beye teşekkür ederim",
+    rating: 5,
+    date: "bir yıl önce"
+  },
+  {
+    id: 14,
+    name: "Nuri Yoğurtcu",
+    text: "Bilgisayarım ısınıp kapanıyordu, macun vb. işlemler incelikle yapılmış ayrıca bakım ve temizliğini de yapmışlar. Güvenilir",
+    rating: 5,
+    date: "bir yıl önce"
+  },
+  {
+    id: 15,
+    name: "Ks A",
+    text: "Güvenilir ve kaliteli. Bilgisayar hizmeti arayan herkese tavsiye ederim.",
+    rating: 5,
+    date: "bir yıl önce"
+  },
+  {
+    id: 16,
+    name: "UFUK REKLAM",
+    text: "Alanında uzman gönül rahatlığıyla işlerinizi yaptırabilirsiniz",
+    rating: 5,
+    date: "bir yıl önce"
+  },
+  {
+    id: 17,
+    name: "Mahsa MIKAEILI",
+    text: "işlerinde çok iyi ve başarılı. En kısa süre de problemi çöze biliyorlar.",
+    rating: 5,
+    date: "bir yıl önce"
+  },
+  {
+    id: 18,
+    name: "Sefa Mert NALBANT",
+    text: "Kibar ve pratik hemen sorunumu çözdü teşekkürler abi",
+    rating: 5,
+    date: "bir yıl önce"
+  },
+  {
+    id: 19,
+    name: "Random RANDOM",
+    text: "Tüm kasayı profesyonelce topladı işinin ehli",
+    rating: 5,
+    date: "bir yıl önce"
+  },
+  {
+    id: 20,
+    name: "Murat Ak",
+    text: "MSI dizüstü bilgisayarımın fan temizliği ve termal macun değişimi yapıldı. Çok memnun kaldım. Gökhan bey çok titiz ve ilgili davrandı. Gözünüz kapalı güvenebileceğiniz bir servis.",
+    rating: 5,
+    date: "2 yıl önce"
+  },
+  {
+    id: 21,
+    name: "İdil Yılmaz",
+    text: "İşinin uzmanı! Gökhan Bey 13 yıllık Vaio'mu baştan yarattı. Bütün ilgisiyle tüm sorularımı detaylı bir şekilde cevapladı. Bilgisayar bakım&tamir için tek adresim!",
+    rating: 5,
+    date: "2 yıl önce"
+  },
+  {
+    id: 22,
+    name: "gokhan evliyaoglu",
+    text: "Dokuz yıllık dizüstü bilgisayarımda  birçok sorun vardı. Parça değişim ücretinin yüksek olması dışında verilen hizmetten gayet memnunum. Yeni bir bilgisayar almaktansa çok daha ucuza mal ettim.",
+    rating: 5,
+    date: "2 yıl önce"
+  },
+  {
+    id: 23,
+    name: "Kerem Konar",
+    text: "Şirketimizin 6 tane kasa bilgisayarını gökhan beye emanet ettik yıllardır yavaş kullandığımız makineler artık sıfır ayarında ve de hızlı gökhan beye ilgi ve alakası için teşekkür ederiz",
+    rating: 5,
+    date: "2 yıl önce"
+  },
+  {
+    id: 24,
+    name: "Başak Gözde",
+    text: "5 yıldız az bile. Üzerinden araba geçen telefonumu birkaç saatte düzeltip sorunsuz teslim etti. İlgisi, alakası kusursuz. çok teşekkür ederim",
+    rating: 5,
+    date: "2 yıl önce"
+  },
+  {
+    id: 25,
+    name: "Emre YILDIZ",
+    text: "İşinin ehli güzel insan. Tüm bilgisayar işlerimde gözüm kapalı güvendiğim ve gittiğim tek yer. Uygun fiyat kaliteli hizmet.",
+    rating: 5,
+    date: "2 yıl önce"
+  },
+  {
+    id: 26,
+    name: "Hilal Polat",
+    text: "Çok memnun kaldım, bilgisayarımı bundan sonra buraya getireceğim. Herkese tavsiye ederim. Çok ilgililer ve bana çok yardımcı oldular.",
+    rating: 5,
+    date: "2 yıl önce"
+  }
 ]
 
 export default function ReviewSection() {

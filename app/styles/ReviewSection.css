@@ -1,6 +1,6 @@
 .review-section {
   padding: 5rem 0;
-  background-color: #F0F9FF;
+  background-color: #f0f9ff;
   position: relative;
 }
 
@@ -16,7 +16,7 @@
 .review-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #2C5282;
+  color: #2c5282;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,11 +40,11 @@
 .review-rating {
   font-size: 2rem;
   font-weight: bold;
-  color: #3182CE;
+  color: #3182ce;
 }
 
 .review-count {
-  color: #4A5568;
+  color: #4a5568;
   margin-left: 0.5rem;
 }
 
@@ -98,13 +98,13 @@
 .review-text {
   font-size: 0.875rem;
   margin-bottom: 1rem;
-  color: #4A5568;
+  color: #4a5568;
 }
 
 .review-author {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #2D3748;
+  color: #2d3748;
 }
 
 .review-date {
@@ -123,12 +123,12 @@
 
 .review-gradient-left {
   left: 0;
-  background: linear-gradient(to right, #F0F9FF, transparent);
+  background: linear-gradient(to right, #f0f9ff, transparent);
 }
 
 .review-gradient-right {
   right: 0;
-  background: linear-gradient(to left, #F0F9FF, transparent);
+  background: linear-gradient(to left, #f0f9ff, transparent);
 }
 
 .review-nav-button {
