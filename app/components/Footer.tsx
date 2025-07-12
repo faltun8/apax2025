@@ -31,7 +31,14 @@ export default function Footer() {
             <div className="footer-contact-info">
               <p className="flex items-start">
                 <MapPin className="mr-2 h-5 w-5 flex-shrink-0 text-blue-400" />
-                <span>Ayrancı, Güvenevler Mh. Yeşilyurt Sk. NO:18/A Aşağı, 06690 Çankaya/Ankara, Türkiye</span>
+                <a
+                  href="https://maps.app.goo.gl/oswggtrpRYpdeDCR6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-400 transition-colors"
+                >
+                  Ayrancı, Güvenevler Mh. Yeşilyurt Sk. NO:18/A Aşağı, 06690 Çankaya/Ankara, Türkiye
+                </a>
               </p>
               <p className="flex items-center">
                 <Phone className="mr-2 h-5 w-5 flex-shrink-0 text-blue-400" />
@@ -42,6 +49,7 @@ export default function Footer() {
                 <a href="mailto:gokhansarac@apax.com.tr" className="hover:text-blue-400 transition-colors">gokhansarac@apax.com.tr</a>
               </p>
             </div>
+
           </div>
           <div>
             <h3 className="footer-title">Çalışma Saatleri</h3>
